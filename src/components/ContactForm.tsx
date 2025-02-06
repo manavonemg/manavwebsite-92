@@ -53,25 +53,26 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
         />
       </div>
       <div className="space-y-2">
-        <Label htmlFor="countryCode">Country Code</Label>
-        <Input
-          id="countryCode"
-          name="countryCode"
-          value={formData.countryCode}
-          onChange={handleChange}
-          placeholder="IN"
-        />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="number">Number</Label>
-        <Input
-          id="number"
-          name="number"
-          type="tel"
-          required
-          value={formData.number}
-          onChange={handleChange}
-        />
+        <Label htmlFor="number">Phone Number</Label>
+        <div className="flex gap-2">
+          <Input
+            id="countryCode"
+            name="countryCode"
+            value={formData.countryCode}
+            onChange={handleChange}
+            className="w-20"
+            placeholder="IN"
+          />
+          <Input
+            id="number"
+            name="number"
+            type="tel"
+            required
+            value={formData.number}
+            onChange={handleChange}
+            className="flex-1"
+          />
+        </div>
       </div>
       <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white">
         Send Your Contact

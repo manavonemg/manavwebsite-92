@@ -61,8 +61,9 @@ END:VCARD`;
       <div className="flex gap-2 mt-6">
         <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
           <DialogTrigger asChild>
-            <Button className="bg-primary hover:bg-primary/90 text-white px-4 py-2">
-              Exchange Contact
+            <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 flex items-center gap-2">
+              <CircleUserRound className="w-4 h-4" />
+              <span>Exchange Contact</span>
             </Button>
           </DialogTrigger>
           <DialogContent>
@@ -74,12 +75,12 @@ END:VCARD`;
         </Dialog>
 
         <Button 
-          variant="outline"
+          variant="outline" 
+          size="icon"
           onClick={downloadVCard}
-          className="flex items-center gap-2"
+          className="w-10 h-10 rounded-full"
         >
           <CircleUserRound className="w-4 h-4" />
-          <span>Save Contact</span>
         </Button>
       </div>
     </div>
