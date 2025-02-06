@@ -1,5 +1,6 @@
+
 import { useState } from "react";
-import { Calendar, QrCode, Phone, Mail, MessageSquare, MessageCircle, Info, Image } from "lucide-react";
+import { CalendarClock, ScanLine, Phone, Mail, Send, Book, FilePenLine, Heart, Brain, Linkedin, Instagram } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import ContactForm from "./ContactForm";
@@ -10,19 +11,19 @@ const BusinessCard = () => {
 
   const navigationItems = [
     [
-      { title: "The Unscripted Credo", icon: <Info className="w-8 h-8" /> },
-      { title: "The Unscripted Story", icon: <Info className="w-8 h-8" /> },
-      { title: "The Unscripted Ethos", icon: <Info className="w-8 h-8" /> },
+      { title: "The Unscripted\nCredo", icon: <Book className="w-8 h-8" /> },
+      { title: "The Unscripted\nStory", icon: <FilePenLine className="w-8 h-8" /> },
+      { title: "The Unscripted\nEthos", icon: <Heart className="w-8 h-8" /> },
     ],
     [
-      { title: "Inside My\nMind", icon: <Info className="w-8 h-8" /> },
-      { title: "The Unscripted Circle", icon: <Info className="w-8 h-8" /> },
-      { title: "The Unscripted Frame", icon: <Info className="w-8 h-8" /> },
+      { title: "Inside\nMy\nMind", icon: <Brain className="w-8 h-8" /> },
+      { title: "The Unscripted\nCircle", icon: <Linkedin className="w-8 h-8" /> },
+      { title: "The Unscripted\nFrame", icon: <Instagram className="w-8 h-8" /> },
     ],
     [
       { title: "Direct Dial", icon: <Phone className="w-8 h-8" /> },
       { title: "Direct Inbox", icon: <Mail className="w-8 h-8" /> },
-      { title: "Direct Text", icon: <MessageSquare className="w-8 h-8" /> },
+      { title: "Direct Text", icon: <Send className="w-8 h-8" /> },
     ],
   ];
 
@@ -30,7 +31,7 @@ const BusinessCard = () => {
     <div className="max-w-md mx-auto bg-white min-h-screen font-figtree flex flex-col">
       <div className="flex-grow">
         <div className="relative">
-          <div className="h-48 bg-gray-200 relative">
+          <div className="h-36 sm:h-48 bg-gray-200 relative">
             <img src="/lovable-uploads/d67af518-811c-4d73-893e-f965f7db0425.png" alt="Cover" className="w-full h-full object-cover" />
             <a
               href="https://calendly.com"
@@ -38,13 +39,13 @@ const BusinessCard = () => {
               rel="noopener noreferrer"
               className="absolute top-4 left-4 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-all duration-300"
             >
-              <Calendar className="w-8 h-8 text-primary" />
+              <CalendarClock className="w-8 h-8 text-primary" />
             </a>
             <button
               onClick={() => setShowQR(true)}
               className="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-all duration-300"
             >
-              <QrCode className="w-8 h-8 text-primary" />
+              <ScanLine className="w-8 h-8 text-primary" />
             </button>
           </div>
           
@@ -77,7 +78,7 @@ const BusinessCard = () => {
           </p>
           
           <p className="mt-4 text-black text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Leading the chaos at Unscripted – Because your brand deserves more than just "good enough."
           </p>
 
           <Dialog>
