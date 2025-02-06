@@ -49,3 +49,4 @@ const QRModal = ({ open, onClose }: QRModalProps) => {
 };
 
 export default QRModal;
+
