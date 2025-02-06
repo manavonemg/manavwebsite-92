@@ -27,7 +27,7 @@ const BusinessCard = () => {
   ];
 
   return (
-    <div className="max-w-md mx-auto bg-customBg min-h-screen font-figtree flex flex-col">
+    <div className="max-w-md mx-auto bg-white min-h-screen font-figtree flex flex-col">
       <div className="flex-grow">
         <div className="relative">
           <div className="h-48 bg-gray-200 relative">
@@ -59,20 +59,20 @@ const BusinessCard = () => {
         </div>
 
         <div className="mt-20 px-6">
-          <h1 className="text-2xl font-semibold text-primary text-center">Manav Aildasani</h1>
-          <p className="text-center mt-1 text-primary">
+          <h1 className="text-2xl font-semibold text-black text-center">Manav Aildasani</h1>
+          <p className="text-center mt-1 text-black">
             Director of Brand Chaos @{" "}
             <a
               href="https://www.unscripted.agency"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:opacity-80 transition-opacity"
+              className="text-black hover:opacity-80 transition-opacity"
             >
               Unscripted
             </a>
           </p>
           
-          <p className="mt-4 text-primary text-center">
+          <p className="mt-4 text-black text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
@@ -90,7 +90,7 @@ const BusinessCard = () => {
             </DialogContent>
           </Dialog>
 
-          <div className="mt-8 mb-16 space-y-12">
+          <div className="mt-8 mb-8 space-y-8">
             {navigationItems.map((row, rowIndex) => (
               <div key={rowIndex} className="grid grid-cols-3 gap-4">
                 {row.map((item, index) => (
@@ -98,10 +98,10 @@ const BusinessCard = () => {
                     key={index}
                     className="flex flex-col items-center space-y-2 group"
                   >
-                    <div className="p-3 rounded-full bg-white/50 group-hover:bg-white transition-colors duration-300">
+                    <div className="p-3 rounded-full bg-white group-hover:bg-gray-50 transition-colors duration-300">
                       {item.icon}
                     </div>
-                    <span className="text-xs text-primary text-center px-1 leading-tight">
+                    <span className="text-xs text-black text-center px-1 leading-tight">
                       {item.title}
                     </span>
                   </button>
@@ -112,7 +112,7 @@ const BusinessCard = () => {
         </div>
       </div>
 
-      <footer className="w-full py-4 px-6 text-center text-sm text-primary border-t bg-white">
+      <footer className="w-full py-4 px-6 text-center text-sm text-black border-t bg-white">
         <div>© 2025 Unscripted | All rights reserved</div>
         <div>Approved for Chaos :)</div>
       </footer>
