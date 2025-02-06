@@ -15,7 +15,7 @@ const BusinessCard = () => {
       { title: "The Unscripted Ethos", icon: <Info className="w-6 h-6" /> },
     ],
     [
-      { title: "Inside My Mind", icon: <Info className="w-6 h-6" /> },
+      { title: "Inside My\nMind", icon: <Info className="w-6 h-6" /> },
       { title: "The Unscripted Circle", icon: <Info className="w-6 h-6" /> },
       { title: "The Unscripted Frame", icon: <Info className="w-6 h-6" /> },
     ],
@@ -101,7 +101,7 @@ const BusinessCard = () => {
                     <div className="p-3 rounded-full bg-white group-hover:bg-gray-50 transition-colors duration-300">
                       {item.icon}
                     </div>
-                    <span className="text-xs text-black text-center px-1 leading-tight">
+                    <span className="text-xs text-black text-center px-1 leading-tight whitespace-pre-line">
                       {item.title}
                     </span>
                   </button>
@@ -113,8 +113,8 @@ const BusinessCard = () => {
       </div>
 
       <footer className="w-full py-4 px-6 text-center text-sm text-black border-t bg-white">
-        <div>© 2025 Unscripted | All rights reserved</div>
-        <div>Approved for Chaos :)</div>
+        <div>© 2025 Unscripted | All Rights Reserved</div>
+        <div>Approved For Chaos :)</div>
       </footer>
 
       <QRModal open={showQR} onClose={() => setShowQR(false)} />

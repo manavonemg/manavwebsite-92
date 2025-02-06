@@ -60,7 +60,7 @@ const ContactForm = () => {
           onChange={handleChange}
         />
       </div>
-      <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
+      <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white">
         Save My Contact
       </Button>
     </form>

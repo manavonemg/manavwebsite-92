@@ -22,7 +22,7 @@ export default {
         figtree: ['Figtree', 'sans-serif'],
       },
       colors: {
-        primary: "#43555d",
+        primary: "#44545c",
         customBg: "#eef0f1",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
