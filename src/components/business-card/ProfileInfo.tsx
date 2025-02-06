@@ -6,6 +6,17 @@ import ContactForm from "../ContactForm";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
 
+// Configuration object for easy customization
+const CONFIG = {
+  name: "Manav Aildasani",
+  title: "Director of Brand Chaos",
+  company: "Unscripted",
+  website: "unscripted.agency",
+  phone: "+919962730398",
+  email: "manav@unscripted.agency",
+  description: "Leading the chaos at Unscripted – Because your brand deserves more than just "good enough."",
+};
+
 const ProfileInfo = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const { toast } = useToast();
@@ -13,21 +24,21 @@ const ProfileInfo = () => {
   const downloadVCard = () => {
     const vcard = `BEGIN:VCARD
 VERSION:3.0
-FN;CHARSET=UTF-8:Manav Aildasani
-N;CHARSET=UTF-8:Aildasani;Manav;;;
-EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:manav@unscripted.agency
-TEL;TYPE=CELL:+919962730398
-TITLE;CHARSET=UTF-8:Director of Brand Chaos
-ORG;CHARSET=UTF-8:Unscripted
-URL;type=WORK;CHARSET=UTF-8:unscripted.agency
-REV:2025-02-06T17:27:27.873Z
+FN;CHARSET=UTF-8:${CONFIG.name}
+N;CHARSET=UTF-8:${CONFIG.name.split(' ').reverse().join(';')};;;
+EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:${CONFIG.email}
+TEL;TYPE=CELL:${CONFIG.phone}
+TITLE;CHARSET=UTF-8:${CONFIG.title}
+ORG;CHARSET=UTF-8:${CONFIG.company}
+URL;type=WORK;CHARSET=UTF-8:${CONFIG.website}
+REV:${new Date().toISOString()}
 END:VCARD`;
 
     const blob = new Blob([vcard], { type: 'text/vcard' });
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.setAttribute('download', 'Manav Unscripted.vcf');
+    link.setAttribute('download', `${CONFIG.name.replace(' ', '_')}.vcf`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -35,27 +46,27 @@ END:VCARD`;
     
     toast({
       title: "Contact downloaded!",
-      description: "You can now find Manav's contact in your address book.",
+      description: `You can now find ${CONFIG.name}'s contact in your address book.`,
     });
   };
 
   return (
     <div className="mt-20 px-6">
-      <h1 className="text-2xl font-semibold text-black text-center">Manav Aildasani</h1>
+      <h1 className="text-2xl font-semibold text-black text-center">{CONFIG.name}</h1>
       <p className="text-center mt-1 text-black">
-        Director of Brand Chaos @{" "}
+        {CONFIG.title} @{" "}
         <a
-          href="https://www.unscripted.agency"
+          href={`https://www.${CONFIG.website}`}
           target="_blank"
           rel="noopener noreferrer"
           className="text-black hover:opacity-80 transition-opacity"
         >
-          Unscripted
+          {CONFIG.company}
         </a>
       </p>
       
       <p className="mt-4 text-black text-center">
-        Leading the chaos at Unscripted – Because your brand deserves more than just "good enough."
+        {CONFIG.description}
       </p>
 
       <div className="flex gap-2 mt-6">

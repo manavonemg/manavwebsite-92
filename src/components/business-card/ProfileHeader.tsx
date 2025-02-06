@@ -1,18 +1,21 @@
 
 import { CalendarClock, ScanLine } from "lucide-react";
+import { memo } from "react";
 
 interface ProfileHeaderProps {
   onOpenQR: () => void;
 }
 
-const ProfileHeader = ({ onOpenQR }: ProfileHeaderProps) => {
+const ProfileHeader = memo(({ onOpenQR }: ProfileHeaderProps) => {
   return (
     <div className="relative">
       <div className="h-64 bg-gray-200 relative">
         <img 
           src="/lovable-uploads/fd49c558-5f5a-48dd-aba3-8b285febc428.png" 
           alt="Cover" 
-          className="w-full h-full object-cover object-center" 
+          className="w-full h-full object-cover object-center"
+          loading="eager"
+          fetchPriority="high"
         />
         <a
           href="https://calendar.app.google/n3pZifaLXkDZdCKM6"
@@ -36,18 +39,23 @@ const ProfileHeader = ({ onOpenQR }: ProfileHeaderProps) => {
             src="/lovable-uploads/a98207a1-3f6c-4f60-b4e7-3a0fc30182c0.png" 
             alt="Profile" 
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
         <div className="w-12 h-12 bg-gray-200 rounded-full border-2 border-white shadow-lg -ml-4 overflow-hidden">
           <img 
             src="/lovable-uploads/0bf00432-c4f7-4f17-adf5-22312b84131c.png" 
             alt="Secondary profile" 
-            className="w-full h-full object-cover" 
+            className="w-full h-full object-cover"
+            loading="eager"
           />
         </div>
       </div>
     </div>
   );
-};
+});
+
+ProfileHeader.displayName = 'ProfileHeader';
 
 export default ProfileHeader;

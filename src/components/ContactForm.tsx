@@ -5,13 +5,26 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
 
-const ContactForm = ({ onClose }: { onClose: () => void }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    countryCode: "",
-    number: "",
-  });
+interface ContactFormProps {
+  onClose: () => void;
+}
+
+interface FormData {
+  name: string;
+  company: string;
+  countryCode: string;
+  number: string;
+}
+
+const INITIAL_FORM_STATE: FormData = {
+  name: "",
+  company: "",
+  countryCode: "",
+  number: "",
+};
+
+const ContactForm = ({ onClose }: ContactFormProps) => {
+  const [formData, setFormData] = useState<FormData>(INITIAL_FORM_STATE);
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -24,10 +37,11 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   return (
