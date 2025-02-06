@@ -10,7 +10,7 @@ const ProfileHeader = ({ onOpenQR }: ProfileHeaderProps) => {
     <div className="relative">
       <div className="h-64 bg-gray-200 relative">
         <img 
-          src="/lovable-uploads/4a6a78e7-8d9e-497e-a665-5c903cb40fec.png" 
+          src="/lovable-uploads/d34233db-1103-4980-a125-e97101b3fcb3.png" 
           alt="Cover" 
           className="w-full h-full object-cover object-center" 
         />
