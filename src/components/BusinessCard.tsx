@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { CalendarClock, ScanLine, Phone, Mail, Send, Book, FilePenLine, Heart, Brain, Linkedin, Instagram } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -113,20 +112,20 @@ Big wins are great, but small victories matter too. Recognize growth, effort, an
       <div className="flex-grow">
         <div className="relative">
           <div className="h-64 bg-gray-200 relative">
-            <img src="/lovable-uploads/d67af518-811c-4d73-893e-f965f7db0425.png" alt="Cover" className="w-full h-full object-cover" />
+            <img src="/lovable-uploads/5e37618a-8972-4901-b057-93c44299fac7.png" alt="Cover" className="w-full h-full object-cover" />
             <a
               href="https://calendar.app.google/n3pZifaLXkDZdCKM6"
               target="_blank"
               rel="noopener noreferrer"
               className="absolute top-4 left-4 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-all duration-300"
             >
-              <CalendarClock className="w-6 h-6 text-primary" />
+              <CalendarClock className="w-5 h-5 text-primary" />
             </a>
             <button
               onClick={() => setShowQR(true)}
               className="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-all duration-300"
             >
-              <ScanLine className="w-6 h-6 text-primary" />
+              <ScanLine className="w-5 h-5 text-primary" />
             </button>
           </div>
           
@@ -239,4 +238,3 @@ Big wins are great, but small victories matter too. Recognize growth, effort, an
 };
 
 export default BusinessCard;
-
