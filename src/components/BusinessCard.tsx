@@ -10,19 +10,19 @@ const BusinessCard = () => {
 
   const navigationItems = [
     [
-      { title: "The Unscripted Credo", icon: <Info className="w-6 h-6" /> },
-      { title: "The Unscripted Story", icon: <Info className="w-6 h-6" /> },
-      { title: "The Unscripted Ethos", icon: <Info className="w-6 h-6" /> },
+      { title: "The Unscripted Credo", icon: <Info className="w-8 h-8" /> },
+      { title: "The Unscripted Story", icon: <Info className="w-8 h-8" /> },
+      { title: "The Unscripted Ethos", icon: <Info className="w-8 h-8" /> },
     ],
     [
-      { title: "Inside My\nMind", icon: <Info className="w-6 h-6" /> },
-      { title: "The Unscripted Circle", icon: <Info className="w-6 h-6" /> },
-      { title: "The Unscripted Frame", icon: <Info className="w-6 h-6" /> },
+      { title: "Inside My\nMind", icon: <Info className="w-8 h-8" /> },
+      { title: "The Unscripted Circle", icon: <Info className="w-8 h-8" /> },
+      { title: "The Unscripted Frame", icon: <Info className="w-8 h-8" /> },
     ],
     [
-      { title: "Direct Dial", icon: <Phone className="w-6 h-6" /> },
-      { title: "Direct Inbox", icon: <Mail className="w-6 h-6" /> },
-      { title: "Direct Text", icon: <MessageSquare className="w-6 h-6" /> },
+      { title: "Direct Dial", icon: <Phone className="w-8 h-8" /> },
+      { title: "Direct Inbox", icon: <Mail className="w-8 h-8" /> },
+      { title: "Direct Text", icon: <MessageSquare className="w-8 h-8" /> },
     ],
   ];
 
@@ -31,20 +31,20 @@ const BusinessCard = () => {
       <div className="flex-grow">
         <div className="relative">
           <div className="h-48 bg-gray-200 relative">
-            <img src="/placeholder.svg" alt="Cover" className="w-full h-full object-cover" />
+            <img src="/lovable-uploads/d67af518-811c-4d73-893e-f965f7db0425.png" alt="Cover" className="w-full h-full object-cover" />
             <a
               href="https://calendly.com"
               target="_blank"
               rel="noopener noreferrer"
               className="absolute top-4 left-4 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-all duration-300"
             >
-              <Calendar className="w-6 h-6 text-primary" />
+              <Calendar className="w-8 h-8 text-primary" />
             </a>
             <button
               onClick={() => setShowQR(true)}
               className="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-all duration-300"
             >
-              <QrCode className="w-6 h-6 text-primary" />
+              <QrCode className="w-8 h-8 text-primary" />
             </button>
           </div>
           
@@ -57,7 +57,7 @@ const BusinessCard = () => {
               />
             </div>
             <div className="w-12 h-12 bg-gray-200 rounded-full border-2 border-white shadow-lg -ml-4 overflow-hidden">
-              <img src="/placeholder.svg" alt="Secondary profile" className="w-full h-full object-cover" />
+              <img src="/lovable-uploads/0bf00432-c4f7-4f17-adf5-22312b84131c.png" alt="Secondary profile" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -105,7 +105,7 @@ const BusinessCard = () => {
                     <div className="p-3 rounded-full bg-white group-hover:bg-gray-50 transition-colors duration-300">
                       {item.icon}
                     </div>
-                    <span className="text-xs text-black text-center px-1 leading-tight whitespace-pre-line">
+                    <span className="text-sm text-black text-center px-1 leading-tight whitespace-pre-line">
                       {item.title}
                     </span>
                   </button>
