@@ -1,5 +1,5 @@
 
-import { Book, FilePenLine, Heart, Brain, Linkedin, Instagram, Phone, Mail, Send } from "lucide-react";
+import { Book, PenTool, Heart, Brain, Linkedin, Instagram, Phone, Mail, Send } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 interface NavigationItem {
@@ -18,7 +18,7 @@ const NavigationGrid = () => {
       { title: "The Unscripted\nCredo", icon: <Book className="w-8 h-8" /> },
       { 
         title: "The Unscripted\nStory", 
-        icon: <FilePenLine className="w-8 h-8" />,
+        icon: <PenTool className="w-8 h-8" />,
         dialog: {
           title: "Why We Exist",
           content: "At Unscripted, we have come to terms with a simple truth: the old ways do not work anymore. The agency world has been stuck in its comfort zone for far too long, recycling the same ideas, playbooks, and tired promises. But let us face it: everything has changed. The way people connect, brands grow, and stories are told — it's all moving, and agencies need to move with it.\n\nThat's why Unscripted exists - to flip the script. We are not here to sell jargon or talk empty dreams. We are here to build something meaningful – an agency rooted in connections. Results. Impact. We dig deep to understand what keeps our clients up at night, what fuels the people on our team, and what audiences care about. We focus on what works and, more importantly, on what matters.\n\nBeing Unscripted is not just how we identify ourselves – it is how we show up. It is about asking uncomfortable questions, leading into the unknown, and staying adaptable when others play it safe. It is about working with heart, grit, and a belief that every brand deserves more than just 'good enough.' It is a commitment to honesty and clarity because that is what it takes to make a difference.\n\nWe are not just trying to reshape advertising; we want to change how agencies think and create. When we operate with clarity, lead with empathy, and refuse to compromise on what's right - we create work that moves brands and the people behind them.\n\nEvery problem, every story, and every solution is a chance to do things Unscripted. This is not the start of another agency — it's the start of something new.\n\nThis is Unscripted. Join us as we redefine what an agency can be."
