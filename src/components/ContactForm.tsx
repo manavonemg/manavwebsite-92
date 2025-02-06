@@ -34,11 +34,11 @@ VERSION:3.0
 FN;CHARSET=UTF-8:Manav Aildasani
 N;CHARSET=UTF-8:Aildasani;Manav;;;
 EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:manav@unscripted.agency
-TEL;TYPE=WORK,VOICE:919962730398
-TITLE;CHARSET=UTF-8:Director Of Chaos
+TEL;TYPE=CELL:+919962730398
+TITLE;CHARSET=UTF-8:Director of Brand Chaos
 ORG;CHARSET=UTF-8:Unscripted
-URL;type=WORK;CHARSET=UTF-8:https://www.unscripted.agency
-REV:2025-02-06T16:16:56.986Z
+URL;type=WORK;CHARSET=UTF-8:unscripted.agency
+REV:2025-02-06T17:27:27.873Z
 END:VCARD`;
 
     const blob = new Blob([vcard], { type: 'text/vcard' });
