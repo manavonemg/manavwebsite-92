@@ -14,7 +14,7 @@ const QRModal = ({ open, onClose }: QRModalProps) => {
       try {
         await navigator.share({
           title: "Connect with Manav!",
-          text: "Discover more about Unscripted and how we can collaborate by checking out my profile.\n\nClick on the link: www.unscripted.agency/card/manavaildasani",
+          text: "Discover more about Unscripted and how we can collaborate by checking out my profile.\n\nClick on the link:",
           url: "https://www.unscripted.agency/card/manavaildasani",
         });
       } catch (error) {

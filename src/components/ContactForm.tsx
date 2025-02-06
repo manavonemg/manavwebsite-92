@@ -45,7 +45,7 @@ END:VCARD`;
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.setAttribute('download', 'Manav Aildasani.vcf');
+    link.setAttribute('download', 'Manav Unscripted.vcf');
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
