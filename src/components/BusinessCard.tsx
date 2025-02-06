@@ -16,14 +16,38 @@ const BusinessCard = () => {
       { title: "The Unscripted\nEthos", icon: <Heart className="w-8 h-8" /> },
     ],
     [
-      { title: "Inside\nMy\nMind", icon: <Brain className="w-8 h-8" /> },
-      { title: "The Unscripted\nCircle", icon: <Linkedin className="w-8 h-8" /> },
-      { title: "The Unscripted\nFrame", icon: <Instagram className="w-8 h-8" /> },
+      { 
+        title: "Inside\nMy\nMind", 
+        icon: <Brain className="w-8 h-8" />,
+        href: "https://www.linkedin.com/in/manavaildasani"
+      },
+      { 
+        title: "The Unscripted\nCircle", 
+        icon: <Linkedin className="w-8 h-8" />,
+        href: "https://www.linkedin.com/company/unscripted-agency"
+      },
+      { 
+        title: "The Unscripted\nFrame", 
+        icon: <Instagram className="w-8 h-8" />,
+        href: "https://www.instagram.com/unscripted_agency"
+      },
     ],
     [
-      { title: "Direct Dial", icon: <Phone className="w-8 h-8" /> },
-      { title: "Direct Inbox", icon: <Mail className="w-8 h-8" /> },
-      { title: "Direct Text", icon: <Send className="w-8 h-8" /> },
+      { 
+        title: "Direct Dial", 
+        icon: <Phone className="w-8 h-8" />,
+        href: "tel:+919962730398"
+      },
+      { 
+        title: "Direct Inbox", 
+        icon: <Mail className="w-8 h-8" />,
+        href: "mailto:manav@unscripted.agency"
+      },
+      { 
+        title: "Direct Text", 
+        icon: <Send className="w-8 h-8" />,
+        href: "https://wa.me/919962730398"
+      },
     ],
   ];
 
@@ -31,10 +55,10 @@ const BusinessCard = () => {
     <div className="max-w-md mx-auto bg-white min-h-screen font-figtree flex flex-col">
       <div className="flex-grow">
         <div className="relative">
-          <div className="h-36 sm:h-48 bg-gray-200 relative">
+          <div className="h-48 sm:h-64 bg-gray-200 relative">
             <img src="/lovable-uploads/d67af518-811c-4d73-893e-f965f7db0425.png" alt="Cover" className="w-full h-full object-cover" />
             <a
-              href="https://calendly.com"
+              href="https://calendar.app.google/n3pZifaLXkDZdCKM6"
               target="_blank"
               rel="noopener noreferrer"
               className="absolute top-4 left-4 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-all duration-300"
@@ -99,8 +123,11 @@ const BusinessCard = () => {
             {navigationItems.map((row, rowIndex) => (
               <div key={rowIndex} className="grid grid-cols-3 gap-4">
                 {row.map((item, index) => (
-                  <button
+                  <a
                     key={index}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex flex-col items-center space-y-2 group"
                   >
                     <div className="p-3 rounded-full bg-white group-hover:bg-gray-50 transition-colors duration-300">
@@ -109,7 +136,7 @@ const BusinessCard = () => {
                     <span className="text-sm text-black text-center px-1 leading-tight whitespace-pre-line">
                       {item.title}
                     </span>
-                  </button>
+                  </a>
                 ))}
               </div>
             ))}

@@ -1,6 +1,7 @@
+
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { QrCode, Share2, MessageCircle, MessageSquare } from "lucide-react";
+import { Share2 } from "lucide-react";
 
 interface QRModalProps {
   open: boolean;
@@ -21,52 +22,26 @@ const QRModal = ({ open, onClose }: QRModalProps) => {
     }
   };
 
-  const shareButtons = [
-    {
-      icon: <MessageCircle className="w-5 h-5" />,
-      label: "WhatsApp",
-      onClick: () => {
-        window.open(
-          `whatsapp://send?text=${encodeURIComponent(window.location.href)}`,
-          "_blank"
-        );
-      },
-    },
-    {
-      icon: <MessageSquare className="w-5 h-5" />,
-      label: "SMS",
-      onClick: () => {
-        window.open(`sms:?body=${encodeURIComponent(window.location.href)}`);
-      },
-    },
-    {
-      icon: <Share2 className="w-5 h-5" />,
-      label: "More",
-      onClick: handleShare,
-    },
-  ];
-
   return (
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">
         <div className="flex flex-col items-center space-y-6 py-4">
           <div className="p-4 bg-gray-50 rounded-lg">
-            <QrCode className="w-48 h-48" />
+            <img 
+              src="/lovable-uploads/141add4f-7e91-42fa-8662-b48791f1d249.png" 
+              alt="QR Code"
+              className="w-48 h-48 object-contain" 
+            />
           </div>
           
-          <div className="w-full grid grid-cols-3 gap-4">
-            {shareButtons.map((button, index) => (
-              <Button
-                key={index}
-                variant="outline"
-                className="flex flex-col items-center space-y-1 h-auto py-3"
-                onClick={button.onClick}
-              >
-                {button.icon}
-                <span className="text-xs">{button.label}</span>
-              </Button>
-            ))}
-          </div>
+          <Button
+            variant="outline"
+            className="flex items-center space-x-2 h-auto py-3"
+            onClick={handleShare}
+          >
+            <Share2 className="w-5 h-5" />
+            <span>Share</span>
+          </Button>
         </div>
       </DialogContent>
     </Dialog>
