@@ -12,7 +12,7 @@ const ProfileHeader = ({ onOpenQR }: ProfileHeaderProps) => {
         <img 
           src="/lovable-uploads/d34233db-1103-4980-a125-e97101b3fcb3.png" 
           alt="Cover" 
-          className="w-full h-full object-cover object-center" 
+          className="w-full h-full object-cover object-center object-scale-down" 
         />
         <a
           href="https://calendar.app.google/n3pZifaLXkDZdCKM6"
