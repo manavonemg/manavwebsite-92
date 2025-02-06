@@ -18,8 +18,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        figtree: ['Figtree', 'sans-serif'],
+      },
       colors: {
-        primary: "#43555d",
+        primary: "#000000",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
