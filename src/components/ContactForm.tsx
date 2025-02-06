@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,8 +16,8 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Contact saved successfully!",
-      description: "You can now find the contact in your address book.",
+      title: "Contact sent successfully!",
+      description: "Your contact information has been shared.",
     });
   };
 
@@ -24,6 +25,35 @@ const ContactForm = () => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
+    });
+  };
+
+  const downloadVCard = () => {
+    const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN;CHARSET=UTF-8:Manav Aildasani
+N;CHARSET=UTF-8:Aildasani;Manav;;;
+EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:manav@unscripted.agency
+TEL;TYPE=WORK,VOICE:919962730398
+TITLE;CHARSET=UTF-8:Director Of Chaos
+ORG;CHARSET=UTF-8:Unscripted
+URL;type=WORK;CHARSET=UTF-8:https://www.unscripted.agency
+REV:2025-02-06T16:16:56.986Z
+END:VCARD`;
+
+    const blob = new Blob([vcard], { type: 'text/vcard' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'Manav Aildasani.vcf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+    
+    toast({
+      title: "Contact downloaded!",
+      description: "You can now find Manav's contact in your address book.",
     });
   };
 
@@ -60,9 +90,19 @@ const ContactForm = () => {
           onChange={handleChange}
         />
       </div>
-      <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white">
-        Save My Contact
-      </Button>
+      <div className="flex flex-col gap-2">
+        <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white">
+          Send Your Contact
+        </Button>
+        <Button 
+          type="button" 
+          variant="outline"
+          onClick={downloadVCard}
+          className="w-full"
+        >
+          Save My Contact
+        </Button>
+      </div>
     </form>
   );
 };

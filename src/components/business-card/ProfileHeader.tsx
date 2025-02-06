@@ -10,9 +10,9 @@ const ProfileHeader = ({ onOpenQR }: ProfileHeaderProps) => {
     <div className="relative">
       <div className="h-64 bg-gray-200 relative">
         <img 
-          src="/lovable-uploads/d34233db-1103-4980-a125-e97101b3fcb3.png" 
+          src="/lovable-uploads/fd49c558-5f5a-48dd-aba3-8b285febc428.png" 
           alt="Cover" 
-          className="w-full h-full object-cover object-center object-scale-down" 
+          className="w-full h-full object-cover object-center" 
         />
         <a
           href="https://calendar.app.google/n3pZifaLXkDZdCKM6"
