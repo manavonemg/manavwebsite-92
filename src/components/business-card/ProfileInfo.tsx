@@ -14,7 +14,7 @@ const CONFIG = {
   website: "unscripted.agency",
   phone: "+919962730398",
   email: "manav@unscripted.agency",
-  description: "Leading the chaos at Unscripted – Because your brand deserves more than just "good enough."",
+  description: 'Leading the chaos at Unscripted – Because your brand deserves more than just "good enough."',
 };
 
 const ProfileInfo = () => {
