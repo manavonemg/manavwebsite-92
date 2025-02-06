@@ -13,8 +13,9 @@ const QRModal = ({ open, onClose }: QRModalProps) => {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "Manav Aildasani's Digital Card",
-          url: window.location.href,
+          title: "Connect with Manav!",
+          text: "Discover more about Unscripted and how we can collaborate by checking out my profile.",
+          url: "https://www.unscripted.agency/card/manavaildasani",
         });
       } catch (error) {
         console.error("Error sharing:", error);
@@ -49,4 +50,3 @@ const QRModal = ({ open, onClose }: QRModalProps) => {
 };
 
 export default QRModal;
-

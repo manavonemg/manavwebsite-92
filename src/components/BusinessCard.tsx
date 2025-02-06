@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { CalendarClock, ScanLine, Phone, Mail, Send, Book, FilePenLine, Heart, Brain, Linkedin, Instagram } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -35,40 +34,7 @@ This is Unscripted. Join us as we redefine what an agency can be.`
         icon: <Heart className="w-8 h-8" />,
         dialog: {
           title: "Core Values",
-          content: `At Unscripted, we have developed a set of values that reflect how we work, think, and connect. These are not just principles we throw around but the guiding light to all of our processes, internal or external. They keep us grounded and remind us why we choose this job daily. These values are the heartbeat of Unscripted, and they shape not just our work but the culture we are building together - one where growth, creativity, and progress never stop.
-
-**Seek discomfort.**
-Discomfort is the birthplace of growth. Embrace the uneasy, unfamiliar, and challenging — it is where magic happens.
-
-**Creativity thrives on honesty.**
-Honest conversations lead to honest work. Speak clearly, listen actively, and always tell the truth - even when it's uncomfortable.
-
-**No "I" in Unscripted.**
-Collaboration is not optional but foundational. The best ideas come when everyone feels heard, respected, and invested.
-
-**Empathy is a superpower.**
-Understanding others — clients, audiences, and colleagues — fuels better work. Before you make decisions, walk a mile in someone else's shoes.
-
-**Respect the blank canvas.**
-Everything starts with infinite possibilities. Please treat it with the respect it deserves by creating something truly original.
-
-**Do work that matters.**
-Do not create just for the sake of it. Everything should have a purpose, spark change, or solve a problem worth solving.
-
-**Clarity over chaos.**
-In a world filled with noise, simplicity wins. Prioritize focused thinking, clear communication, and getting to the point.
-
-**Leave things better than you found them.**
-Whether it is a project, a relationship, or the planet, aim to improve and elevate. Small actions create lasting impact.
-
-**Be water, not stone.**
-Adapt to challenges like water flowing around rocks. Stay flexible, open-minded, and ready to find new paths when old ones do not work.
-
-**Just show up.**
-Consistency beats perfection. Show up with intent, do your best, and commit to the process - even on the hard days.
-
-**Celebrate progress.**
-Big wins are great, but small victories matter too. Recognize growth, effort, and moments that lead to a breakthrough.`
+          content: "At Unscripted, we have developed a set of values that reflect how we work, think, and connect. These are not just principles we throw around but the guiding light to all of our processes, internal or external. They keep us grounded and remind us why we choose this job daily. These values are the heartbeat of Unscripted, and they shape not just our work but the culture we are building together - one where growth, creativity, and progress never stop.\n\n**Seek discomfort.**\nDiscomfort is the birthplace of growth. Embrace the uneasy, unfamiliar, and challenging — it is where magic happens.\n\n**Creativity thrives on honesty.**\nHonest conversations lead to honest work. Speak clearly, listen actively, and always tell the truth - even when it's uncomfortable.\n\n**No \"I\" in Unscripted.**\nCollaboration is not optional but foundational. The best ideas come when everyone feels heard, respected, and invested.\n\n**Empathy is a superpower.**\nUnderstanding others — clients, audiences, and colleagues — fuels better work. Before you make decisions, walk a mile in someone else's shoes.\n\n**Respect the blank canvas.**\nEverything starts with infinite possibilities. Please treat it with the respect it deserves by creating something truly original.\n\n**Do work that matters.**\nDo not create just for the sake of it. Everything should have a purpose, spark change, or solve a problem worth solving.\n\n**Clarity over chaos.**\nIn a world filled with noise, simplicity wins. Prioritize focused thinking, clear communication, and getting to the point.\n\n**Leave things better than you found them.**\nWhether it is a project, a relationship, or the planet, aim to improve and elevate. Small actions create lasting impact.\n\n**Be water, not stone.**\nAdapt to challenges like water flowing around rocks. Stay flexible, open-minded, and ready to find new paths when old ones do not work.\n\n**Just show up.**\nConsistency beats perfection. Show up with intent, do your best, and commit to the process - even on the hard days.\n\n**Celebrate progress.**\nBig wins are great, but small victories matter too. Recognize growth, effort, and moments that lead to a breakthrough."
         }
       },
     ],
@@ -239,4 +205,3 @@ Big wins are great, but small victories matter too. Recognize growth, effort, an
 };
 
 export default BusinessCard;
-
