@@ -9,7 +9,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
   const [formData, setFormData] = useState({
     name: "",
     company: "",
-    countryCode: "IN",
+    countryCode: "",
     number: "",
   });
   const { toast } = useToast();
@@ -61,7 +61,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
             value={formData.countryCode}
             onChange={handleChange}
             className="w-20"
-            placeholder="IN"
+            placeholder="CC"
           />
           <Input
             id="number"
