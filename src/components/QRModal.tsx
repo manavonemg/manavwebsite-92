@@ -1,6 +1,6 @@
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { QrCode, Share2, WhatsApp, MessageSquare } from "lucide-react";
+import { QrCode, Share2, MessageCircle, MessageSquare } from "lucide-react";
 
 interface QRModalProps {
   open: boolean;
@@ -23,7 +23,7 @@ const QRModal = ({ open, onClose }: QRModalProps) => {
 
   const shareButtons = [
     {
-      icon: <WhatsApp className="w-5 h-5" />,
+      icon: <MessageCircle className="w-5 h-5" />,
       label: "WhatsApp",
       onClick: () => {
         window.open(
