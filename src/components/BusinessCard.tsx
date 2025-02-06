@@ -31,7 +31,7 @@ const BusinessCard = () => {
       <div className="flex-grow">
         <div className="relative">
           <div className="h-48 bg-gray-200 relative">
-            <Image className="w-full h-full object-cover" />
+            <img src="/placeholder.svg" alt="Cover" className="w-full h-full object-cover" />
             <a
               href="https://calendly.com"
               target="_blank"
@@ -49,11 +49,15 @@ const BusinessCard = () => {
           </div>
           
           <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 flex items-end">
-            <div className="w-32 h-32 bg-gray-200 rounded-full border-4 border-white shadow-lg">
-              <Image className="w-full h-full object-cover rounded-full" />
+            <div className="w-32 h-32 bg-gray-200 rounded-full border-4 border-white shadow-lg overflow-hidden">
+              <img 
+                src="/lovable-uploads/a98207a1-3f6c-4f60-b4e7-3a0fc30182c0.png" 
+                alt="Profile" 
+                className="w-full h-full object-cover"
+              />
             </div>
-            <div className="w-12 h-12 bg-gray-200 rounded-full border-2 border-white shadow-lg -ml-4">
-              <Image className="w-full h-full object-cover rounded-full" />
+            <div className="w-12 h-12 bg-gray-200 rounded-full border-2 border-white shadow-lg -ml-4 overflow-hidden">
+              <img src="/placeholder.svg" alt="Secondary profile" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
